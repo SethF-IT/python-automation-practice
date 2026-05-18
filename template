@@ -1,0 +1,32 @@
+# Project Name
+
+## Overview
+[2-3 sentences: what it does, why it's useful]
+
+## Features
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Technologies Used
+- Python 3.x
+- Azure SDK
+- [Other tools]
+
+## Setup
+[Step-by-step installation instructions]
+
+## Usage
+[Examples of how to run it]
+```bash
+python script.py --option value
+```
+
+## Screenshots
+[If applicable - dashboards, output examples]
+
+## Future Enhancements
+[Shows you're thinking ahead]
+
+## Learning Outcomes
+[What you learned building this - especially valuable early on]
