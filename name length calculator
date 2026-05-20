@@ -1,0 +1,5 @@
+print('Hello. What is your name?')
+print('>')
+your_name = input('>')
+print('Nice to meet you, ' + your_name)
+print('Your name is ' + str(len(your_name)) + ' letters long!')
