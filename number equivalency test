@@ -1,0 +1,8 @@
+print('Welcome to the number tester! This tester will tell you if the two numbers you pick are the same or not')
+print('Please pick the first number!')
+first_number = input('>')
+print('Now the second number!')
+second_number = input('>')
+result = first_number == second_number
+print('Are your numbers the same?')
+result
