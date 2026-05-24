@@ -1,0 +1,8 @@
+#The below code is used to add all numbers up to a point.
+#You need to put one number above the number you want
+#For example, to add everything from 1-5, put 6 in range()
+
+total = 0
+for num in range(101):
+    total = total + num
+print(total)
