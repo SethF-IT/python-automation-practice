@@ -1,0 +1,19 @@
+print('Hello! Welcome to the countdown clock')
+i = 10
+while i > 0:
+    print(str(i))
+    i = i - 1
+    if i == 6:
+        print('We are getting close to 0. Are you sure?')
+        answer = input('>')
+        if answer == 'No':
+            print('Good choice!')
+            break
+    if i == 2:
+        print('It is getting really close. Are you absolutely sure?')
+        answer = input('>')
+        if answer == 'No':
+            print('That was close!')
+            break
+if i == 0:
+    print('Kaboom!!!')
