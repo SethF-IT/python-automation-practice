@@ -1,0 +1,11 @@
+grocery_list = []
+while True:
+    print('Enter item ' + str(len(grocery_list) + 1) + ' needed from the grocery store ' +
+      ' (Or enter nothing to stop.):')
+    item = input()
+    if item == '':
+        break
+    grocery_list = grocery_list + [item]  # List concatenation
+print('The grocery list is:')
+for item in grocery_list:
+    print('  ' + item)
