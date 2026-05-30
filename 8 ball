@@ -1,0 +1,15 @@
+import random
+
+messages = ['Most likely',
+    'It will happen',
+    'Sure',
+    'Error. Please try again',
+    'I'm busy, ask later',
+    'Think harder and ask again',
+    'I'm thinking no thanks',
+    'It's looking dicey',
+    'I wouldn't count on it']
+
+print('Ask a yes or no question:')
+input('>')
+print(messages[random.randint(0, len(messages) - 1)])
