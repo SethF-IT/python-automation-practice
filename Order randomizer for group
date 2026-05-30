@@ -1,0 +1,26 @@
+#The below snippet's function is to take a group of names of individuals, and then can randomize the order
+
+import random
+
+people = []
+
+while True:
+    print('Enter person ' + str(len(people) + 1) +
+          ' (Or enter nothing to stop.):')
+    person = input()
+    if person == '':
+        break
+    people = people + [person]  # List concatenation
+
+while True:
+    random.shuffle(people)
+
+    print('Randomized order:')
+    for person in people:
+        print('  ' + person)
+
+    print('Randomize again? (y/n)')
+    answer = input()
+
+    if answer == 'n':
+        break
