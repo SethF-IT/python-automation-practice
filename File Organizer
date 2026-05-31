@@ -1,0 +1,75 @@
+import os
+import shutil
+
+# Path to the Downloads folder
+downloads_folder = r"C:\Users\YourName\Downloads"
+
+# Dictionary of file extensions and destination folders
+file_types = {
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".bmp"],
+    "Documents": [".pdf", ".doc", ".docx", ".txt", ".ppt", ".pptx"],
+    "Spreadsheets": [".xls", ".xlsx", ".csv"],
+    "Videos": [".mp4", ".mov", ".avi", ".mkv"],
+    "Music": [".mp3", ".wav", ".aac"],
+    "Archives": [".zip", ".rar", ".7z"],
+}
+
+# Get all files in the Downloads folder
+for file_name in os.listdir(downloads_folder):
+
+    file_path = os.path.join(downloads_folder, file_name)
+
+    # Skip folders
+    if os.path.isdir(file_path):
+        continue
+
+    moved = False
+
+    # Check each category
+    for folder_name in file_types:
+
+        extensions = file_types[folder_name]
+
+        for extension in extensions:
+
+            if file_name.lower().endswith(extension):
+
+                destination_folder = os.path.join(
+                    downloads_folder,
+                    folder_name
+                )
+
+                # Create folder if it doesn't exist
+                if not os.path.exists(destination_folder):
+                    os.mkdir(destination_folder)
+
+                # Move file
+                shutil.move(
+                    file_path,
+                    os.path.join(destination_folder, file_name)
+                )
+
+                print(file_name, "moved to", folder_name)
+
+                moved = True
+                break
+
+        if moved:
+            break
+
+    # Files that don't match any category
+    if not moved:
+
+        other_folder = os.path.join(downloads_folder, "Other")
+
+        if not os.path.exists(other_folder):
+            os.mkdir(other_folder)
+
+        shutil.move(
+            file_path,
+            os.path.join(other_folder, file_name)
+        )
+
+        print(file_name, "moved to Other")
+
+print("Organization complete!")
